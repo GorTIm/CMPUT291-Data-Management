@@ -1,0 +1,6 @@
+
+
+select distinct writer
+from tweets,follows
+where writer=flwee
+;

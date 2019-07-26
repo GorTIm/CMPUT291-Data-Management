@@ -1,0 +1,36 @@
+#!/bin/bash
+echo "This script implements Phase 2 of the project."
+
+
+rm -f tweetsW.txt
+rm -f termsW.txt
+rm -f datesW.txt
+
+
+rm -f tw.idx
+rm -f te.idx
+rm -f da.idx
+
+chmod +x break.pl
+
+
+
+sort -t, -k1,1 -k2,2n --unique tweets.txt > temp_tweets.txt
+cat  temp_tweets.txt | ./break.pl > tweetsW.txt 
+db_load -c duplicates=1 -f tweetsW.txt -T -t hash tw.idx
+
+sort -t, -k1,1 -k2,2n --unique terms.txt > temp_terms.txt
+cat temp_terms.txt | ./break.pl > termW.txt
+db_load -c duplicates=1 -f termW.txt -T -t btree te.idx
+
+sort  --unique dates.txt > temp_dates.txt
+cat temp_dates.txt | ./break.pl > datesW.txt
+db_load -c duplicates=0 -f datesW.txt -T -t btree da.idx
+
+echo "Deleting temporary files to clean up."
+rm -f temp_tweets.txt
+rm -f temp_terms.txt
+rm -f temp_dates.txt
+
+
+echo "Phase 2 done. Index files generated."

@@ -1,0 +1,113 @@
+Script started on Wed 15 Feb 2017 04:23:47 PM MST
+whan@uc12:~/cmput291/assignment 2>sqll[Kplus
+
+SQL*Plus: Release 12.1.0.2.0 Production on Wed Feb 15 16:23:55 2017
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Enter user-name: whan
+Enter password: 
+Last Successful login time: Wed Feb 15 2017 16:12:19 -07:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> @1
+Question1-whan
+
+    WRITER
+----------
+	83
+	 1
+	25
+	77
+	 2
+	14
+	 4
+	99
+	 3
+	67
+
+10 rows selected.
+
+SQL> @2
+Question2-whan
+
+     FLWER
+----------
+	 1
+	22
+	83
+	 6
+	77
+	 2
+	14
+	 4
+	99
+	 3
+	15
+
+     FLWER
+----------
+	67
+
+12 rows selected.
+
+SQL> @3
+Question3-whan
+SP2-0042: unknown command "intersect" - rest of line ignored.
+
+     FLWEE
+----------
+	67
+	77
+	83
+
+SQL> @4
+Question4-whan
+SP2-0042: unknown command "intersect" - rest of line ignored.
+
+       USR
+----------
+	15
+	41
+	22
+	 6
+	29
+
+SQL> @5
+Question5-whan
+
+       USR TDATE
+---------- ---------
+TEXT
+--------------------------------------------------------------------------------
+	14 11-MAY-16
+Most Trees Are Blue #juvenile #philosophy
+
+	83 14-FEB-14
+Tell me I'm your national treasure
+
+	14 28-MAY-16
+How Can Mirrors Be Real If Our Eyes Arent Real #juvenile #philosophy
+
+
+       USR TDATE
+---------- ---------
+TEXT
+--------------------------------------------------------------------------------
+	 4 22-JAN-16
+Good effort against the #Edmonton #Oilers last night #Toronto Maple #Leafs
+
+	67 29-JAN-16
+The music video for Bad Blood is out now! #tswift
+
+
+SQL> exit
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+whan@uc12:~/cmput291/assignment 2>exit
+exit
+
+Script done on Wed 15 Feb 2017 04:24:45 PM MST
